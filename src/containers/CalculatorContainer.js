@@ -39,7 +39,9 @@ class CalculatorContainer extends Component {
                         <span className="allClear">
                             <OperatorBtn o={'AC'} onClick={() => actions.onClearClick()} />
                         </span>  
-                        <OperatorBtn o={'='} onClick={() => actions.onEqualClick()} />           
+                        <span>
+                            <OperatorBtn o={'='} onClick={() => actions.onEqualClick()} /> 
+                        </span>          
                     </div>
                 </div>
                 <div className="operator">
