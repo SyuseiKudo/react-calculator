@@ -85,6 +85,14 @@ const initialAppState = {
                 default:
                     return state;
             }
+    } else if(action.type === actionTypes.CLEAR) {
+      return {
+        inputValue: 0,
+        operator: '',
+        calculate: false,
+        resultValue: 0,
+        showingResult: false,
+      };
     } else {
         return state;
     }
