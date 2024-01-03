@@ -22,3 +22,8 @@ export const onMinusClick = () => ({
 export const onEqualClick = () => ({
   type: actionTypes.EQUAL,
 });
+
+// ACボタンをクリックしたときに使うAction
+export const onClearClick = () => ({
+  type: actionTypes.CLEAR,
+});
