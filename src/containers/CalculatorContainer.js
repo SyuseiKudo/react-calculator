@@ -38,13 +38,15 @@ class CalculatorContainer extends Component {
                         <NumBtn n={0} onClick = {() => actions.onNumClick(0)}/>   
                         <span className="allClear">
                             <OperatorBtn o={'AC'} onClick={() => actions.onClearClick()} />
-                        </span>             
+                        </span>  
+                        <span>
+                            <OperatorBtn o={'='} onClick={() => actions.onEqualClick()} /> 
+                        </span>          
                     </div>
                 </div>
                 <div className="operator">
                     <OperatorBtn o={'-'} onClick={() => actions.onMinusClick()} />
                     <OperatorBtn o={'+'} onClick={() => actions.onPlusClick()} />
-                    <OperatorBtn o={'='} onClick={() => actions.onEqualClick()} />
                 </div>
             </div>
             </React.Fragment>
