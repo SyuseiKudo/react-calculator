@@ -27,3 +27,13 @@ export const onEqualClick = () => ({
 export const onClearClick = () => ({
   type: actionTypes.CLEAR,
 });
+
+// 掛け算ボタンをクリックしたときに使うAction
+export const onMultiplyClick = () => ({
+  type: actionTypes.MULTIPLY,
+});
+
+// 割り算ボタンをクリックしたときに使うAction
+export const onDivideClick = () => ({
+  type: actionTypes.DIVIDE,
+});

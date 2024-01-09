@@ -47,6 +47,8 @@ class CalculatorContainer extends Component {
                 <div className="operator">
                     <OperatorBtn o={'-'} onClick={() => actions.onMinusClick()} />
                     <OperatorBtn o={'+'} onClick={() => actions.onPlusClick()} />
+                    <OperatorBtn o={'×'} onClick={() => actions.onMultiplyClick()} />
+                    <OperatorBtn o={'÷'} onClick={() => actions.onDivideClick()} />
                 </div>
             </div>
             </React.Fragment>
