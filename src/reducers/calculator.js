@@ -82,6 +82,22 @@ const initialAppState = {
                         resultValue: state.resultValue - state.inputValue,
                         showingResult: true, 
                     };
+                case '*':
+                  return {
+                    inputValue: state.resultValue * state.inputValue,
+                    operator: '',
+                    calculate: false,
+                    resultValue: state.resultValue * state.inputValue,
+                    showingResult: true,
+                  };
+                case '/':
+                  return {
+                    inputValue: state.resultValue / state.inputValue,
+                    operator: '',
+                    calculate: false,
+                    resultValue: state.resultValue / state.inputValue,
+                    showingResult: true,
+                  };
                 default:
                     return state;
             }
@@ -93,7 +109,45 @@ const initialAppState = {
         resultValue: 0,
         showingResult: false,
       };
-    } else {
+    } else if(action.type === actionTypes.MULTIPLY) {
+      if (state.calculate === true) {
+        return {
+          ...state,
+          inputValue: 0,
+          operator: '*',
+          resultValue: state.resultValue * state.inputValue,
+          showingResult: true,
+        };
+      } else {
+        return {
+          ...state,
+          inputValue: 0,
+          operator: '*',
+          calculate: true,
+          resultValue: state.inputValue,
+          showingResult: true,
+        };
+      }
+    } else if(action.type === actionTypes.DIVIDE) {
+      if (state.calculate === true) {
+        return {
+          ...state,
+          inputValue: 0,
+          operator: '/',
+          resultValue: state.resultValue / state.inputValue,
+          showingResult: true,
+        };
+      } else {
+        return {
+          ...state,
+          inputValue: 0,
+          operator: '/',
+          calculate: true,
+          resultValue: state.inputValue,
+          showingResult: true,
+        };
+      }
+    }else {
         return state;
     }
   };
